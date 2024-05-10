@@ -20,11 +20,11 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
    
 2. [Initialize your Terraform environment](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform?tab=readme-ov-file#2-initialize-your-terraform-environment)
 
-3. [Create a Variables file]().
+3. [Create a Variables file](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/variables.tf).
 
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/4cbb1533-b840-47b9-b0ac-ae86c624b28b)
 
-4. [Create S3 bucket]()
+4. [Create S3 bucket](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/s3.tf)
 
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/4c753c2b-71d1-46f9-82e4-306f0a20dcb0)
 
@@ -33,7 +33,7 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/35ed3a35-f2b6-4ed1-96fb-0c81d88b28e3)
 
 
-5. [Add SNS Notification to the bucket]()
+5. [Add SNS Notification to the bucket](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/s3.tf)
 
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/a1eaf1f4-40a0-48ea-9c69-cbec50c672b6)
 
@@ -42,7 +42,7 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/732a687a-a847-4be7-a945-7ce61aae506d)
 
 
-6. [Create SNS Topic]()
+6. [Create SNS Topic](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
 
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/c9656c77-373e-45b0-9813-c63cc50220a7)
 
@@ -51,7 +51,7 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/44555f21-608b-4e19-8f0b-9e044e439b2d)
 
 
-7. [Add Policy to the SNS Topic]()
+7. [Add Policy to the SNS Topic](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
 
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/0bbf74cf-5ff0-4c8b-b3b5-6aaf03a9f2ca)
 
@@ -60,7 +60,7 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/651d3a3c-ebfa-4d26-ba1e-3517deae1ae1)
 
 
-8. [Add Subscription to the SNS Topic]()
+8. [Add Subscription to the SNS Topic](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
 
     /* Do a manual Subscription*/
     
@@ -73,7 +73,7 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
 
     ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/c659d848-7c24-48ee-83fd-728b13d4ce2e)
 
-9. [Optionally you can encrypt your message using KMS key]()
+9. [Optionally you can encrypt your message using KMS key](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/kms.tf)
 
     ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/3a38774a-3cae-42f0-9efb-a1ac48257885)
 
