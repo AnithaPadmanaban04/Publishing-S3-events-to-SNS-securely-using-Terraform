@@ -6,7 +6,7 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
 
 ## Architectural Diagram
 
-![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/97a2af47-ba50-4cb0-b1d5-310a99c0a5a7)
+![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/d9187f7a-e2e5-432e-b8a2-0c476368e469)
 
 ## Prerequisites
 
@@ -16,79 +16,90 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
 
 ## Steps:
 
-1. [Setting up Terraform Environment](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform?tab=readme-ov-file#steps)
-   
-2. [Initialize your Terraform environment](https://github.com/aniwardhan/Host-a-static-website-in-S3-using-Terraform?tab=readme-ov-file#2-initialize-your-terraform-environment)
+## 1. Setting up Terraform Environment
 
-3. [Create a Variables file](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/variables.tf).
+Install Terraform and the AWS Command Line Interface (CLI) on your local machine. Configure your AWS credentials by running aws configure and provide your AWS access key and secret key. Check this [link](https://github.com/AnithaPadmanaban04/Getting-Started-with-Terraform.git) to configure Terraform and AWS CLI
 
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/4cbb1533-b840-47b9-b0ac-ae86c624b28b)
+Create a working directory in your local machine and open the folder in MS Visual Code Editor to start the project
 
-4. [Create S3 bucket](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/s3.tf)
+## 2. [Initialize your Terraform environment](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/provider.tf)
 
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/4c753c2b-71d1-46f9-82e4-306f0a20dcb0)
+A provider in Terraform is a plugin that enables interaction with an API. This includes Cloud providers and Software-as-a-service providers.
+
+The providers are specified in the Terraform configuration code. They tell Terraform which services it needs to interact with.
+
+Provider configurations should be declared in the root module of your Terraform project.
+
+Create a file named [providers.tf](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/provider.tf) to configure the specific cloud providers or services that your Terraform configuration will interact with.
+
+## 3. [Create a Variables file](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/variables.tf).
+
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/42e6742e-53ff-42a4-a0b5-88f09313f816)
+
+## 4. [Create S3 bucket](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/s3.tf)
+
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/b98c108e-5643-4e98-a39b-1e499b08e9c0)
 
    Bucket Created
 
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/35ed3a35-f2b6-4ed1-96fb-0c81d88b28e3)
+ ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/89773098-c1d1-4fe5-90e4-f79818013909)
 
+## 5. [Add SNS Notification to the bucket](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/s3.tf)
 
-5. [Add SNS Notification to the bucket](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/s3.tf)
-
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/a1eaf1f4-40a0-48ea-9c69-cbec50c672b6)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/bf904074-f543-4e74-a0d8-da914e0c58e6)
 
    SNS Topic Created and added to S3 Event Notification
 
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/732a687a-a847-4be7-a945-7ce61aae506d)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/2795f274-3488-4bc2-8ec2-d06e0dd6f635)
 
 
-6. [Create SNS Topic](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
+## 6. [Create SNS Topic](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
 
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/c9656c77-373e-45b0-9813-c63cc50220a7)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/a032dafc-4528-4e93-b5a9-c8e687b628ed)
 
    Check the SNS Topic Creation
 
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/44555f21-608b-4e19-8f0b-9e044e439b2d)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/7a6ee248-85ef-43a3-b9cd-bd6d335b5ee5)
 
+## 7. [Add Policy to the SNS Topic](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
 
-7. [Add Policy to the SNS Topic](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
-
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/0bbf74cf-5ff0-4c8b-b3b5-6aaf03a9f2ca)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/b9d323b9-2f80-4afa-b6af-698c173d71b0)
 
    Access Policy added
 
-   ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/651d3a3c-ebfa-4d26-ba1e-3517deae1ae1)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/83b50c08-67c0-47de-aa55-89f3d7c3f726)
 
 
-8. [Add Subscription to the SNS Topic](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
-
-    /* Do a manual Subscription*/
+## 8. [Add Subscription to the SNS Topic](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/sns.tf)
+      
+      /* Do a manual Subscription*/
     
-    When you do a terraform apply, an initial webhook event would be sent to your subscriber to confirm that email address's subscription for your topic. You will be able to see your email subscriber under Subscriptions tab in your AWS console. 
-    Till you confirm your subscription it would be marked as Pending, once you confirm it, it will be marked as Confirmed and you will events events as emails at your email subscriber. 
+   When you do a terraform apply, an initial webhook event would be sent to your subscriber to confirm that email address's subscription for your topic. You will be able to see your email subscriber under 
+   Subscriptions tab in your AWS console. 
+   Till you confirm your subscription it would be marked as Pending, once you confirm it, it will be marked as Confirmed and you will events events as emails at your email subscriber. 
 
-    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/20224df1-f991-4180-a21e-acc5aaa16401)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/9c55cfa6-4960-4986-98b8-1f945d743577)
 
-    Subcriptions added and manually confirmed
+   Subcriptions added and manually confirmed
 
-    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/c659d848-7c24-48ee-83fd-728b13d4ce2e)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/bcb03224-7030-4014-a575-dc5af3208d64)
 
-9. [Optionally you can encrypt your message using KMS key](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/kms.tf)
+## 9. [Optionally you can encrypt your message using KMS key](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/blob/main/kms.tf)
 
-    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/3a38774a-3cae-42f0-9efb-a1ac48257885)
+  ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/5d3676ee-9466-4087-9100-7f9cd6310909)
 
-10. Finally upload an object to check the output
+## 10. Finally upload an object to check the output
 
-    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/b19e3949-5f7a-4dd6-b6fb-de6081e61ba8)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/3a5066bb-cf58-480c-bf98-04bb57323ac9)
 
-    Received Email Notification
+   Received Email Notification
 
-    ![image](https://github.com/aniwardhan/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/80623694/c7c03cec-979d-4451-9d00-1207ccb55a1c)
+   ![image](https://github.com/AnithaPadmanaban04/Publishing-S3-events-to-SNS-securely-using-Terraform/assets/170385807/82e655f4-008b-4ced-8bfd-16c01da127b6)
 
-11. Destroy all resource created
+## 11. Destroy all resource created
 
-    ```hcl
+   ```hcl
     terraform destroy -auto-approve
-    ```
+   ```
 
 
