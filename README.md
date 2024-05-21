@@ -16,7 +16,7 @@ Create an S3 Bucket event to get SNS Email Notification on Object upload using T
 
 ## Steps:
 
-## 1. Setting up Terraform Environment
+## 1. [Setting up Terraform Environment](https://github.com/AnithaPadmanaban04/Getting-Started-with-Terraform.git)
 
 Install Terraform and the AWS Command Line Interface (CLI) on your local machine. Configure your AWS credentials by running aws configure and provide your AWS access key and secret key. Check this [link](https://github.com/AnithaPadmanaban04/Getting-Started-with-Terraform.git) to configure Terraform and AWS CLI
 
